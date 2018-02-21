@@ -21,14 +21,28 @@ class ToDoCompletedViewController: UIViewController {
     
     @IBAction func CompletedClicked(_ sender: Any) {
         
+        var index = 0
+        for toDo in previousVC.toDos{
+            if toDo.toDoItem == selectedToDo.toDoItem{
+                // print ("Yay: index = \(index)")
+                // remove the item at the point
+                previousVC.toDos.remove(at: index)
+                // refresh the tableview for previous screen
+                previousVC.tableView.reloadData()
+                // and pop the prior screen
+                navigationController?.popViewController(animated: true)
+                // breal out of loop ... the item has been found
+                break
+            }
+            index += 1
+        }
         
     }
     
     override func viewDidLoad() {
 
-        // Comes here with corrected selectedToDo but doesn't display
-        // print("Segue moveToComplete executed with slectedToDo \(selectedToDo.toDoItem)")
-        print (titleLabel.text)
+        // Doesn't display if the label is centered horizontally to "Superview"!?!
+
         titleLabel.text = selectedToDo.toDoItem
        
     }
