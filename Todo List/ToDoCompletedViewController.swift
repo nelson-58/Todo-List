@@ -30,7 +30,7 @@ class ToDoCompletedViewController: UIViewController {
         // print("Segue moveToComplete executed with slectedToDo \(selectedToDo.toDoItem)")
         print (titleLabel.text)
         titleLabel.text = selectedToDo.toDoItem
-        titleLabel.text = "wregerg"
+       
     }
     
 
