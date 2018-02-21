@@ -28,6 +28,7 @@ class ToDoEntryViewController: UIViewController {
             previousVC.toDos.append(toDo)
             // refresh table
             previousVC.tableView.reloadData()
+            navigationController?.popViewController(animated: true)
         }
         
     }

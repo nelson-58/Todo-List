@@ -72,20 +72,47 @@
             </objects>
             <point key="canvasLocation" x="2152.8000000000002" y="115.59220389805098"/>
         </scene>
-        <!--View Controller-->
+        <!--To Do Completed View Controller-->
         <scene sceneID="sv3-7i-Gtw">
             <objects>
-                <viewController id="vJc-Av-eZX" sceneMemberID="viewController">
+                <viewController id="vJc-Av-eZX" customClass="ToDoCompletedViewController" customModule="Todo_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GES-Me-gY2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lc7-BI-JCf">
+                                <rect key="frame" x="149" y="243" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Completed"/>
+                                <connections>
+                                    <action selector="CompletedClicked:" destination="vJc-Av-eZX" eventType="touchUpInside" id="UQ6-Sr-xDQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3V-qF-k1i">
+                                <rect key="frame" x="208" y="-54" width="945" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oci-0M-rsU">
+                                <rect key="frame" x="73" y="144" width="221" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Gt1-GC-ywG"/>
                     </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="oci-0M-rsU" id="bl3-0O-yET"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DcW-gA-PUN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2919" y="116"/>
+            <point key="canvasLocation" x="1469.5999999999999" y="851.42428785607206"/>
         </scene>
         <!--Todo List-->
         <scene sceneID="fYm-z1-TqQ">
@@ -103,9 +130,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="vJc-Av-eZX" kind="show" id="cg8-S3-aNE"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -117,11 +141,14 @@
                     <navigationItem key="navigationItem" id="Odw-bp-UwG">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="m3L-r7-cbp">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="Pwi-VI-bLh"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="moveToEnter" id="Pwi-VI-bLh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="vJc-Av-eZX" kind="show" identifier="moveToComplete" id="CFY-ri-u9E"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3yP-ng-emH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
