@@ -2,9 +2,9 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G1212" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="ToDoCoreData" representedClassName="ToDoCoreData" syncable="YES" codeGenerationType="class">
         <attribute name="important" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="toDoItem" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="toDoItem" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ToDoCoreData" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="ToDoCoreData" positionX="-63" positionY="-18" width="128" height="75"/>
     </elements>
 </model>
