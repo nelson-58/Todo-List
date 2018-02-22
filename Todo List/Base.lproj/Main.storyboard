@@ -32,6 +32,7 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xan-yd-kjE">
                                 <rect key="frame" x="16" y="129" width="343" height="21"/>
+                                <accessibility key="accessibilityConfiguration" hint="Enter new To Do here"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -104,6 +105,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="oci-0M-rsU" firstAttribute="centerX" secondItem="GES-Me-gY2" secondAttribute="centerX" id="5aO-VM-Ssh"/>
                             <constraint firstItem="oci-0M-rsU" firstAttribute="top" secondItem="Gt1-GC-ywG" secondAttribute="top" constant="45" id="Qfb-kB-uHS"/>
                             <constraint firstItem="Gt1-GC-ywG" firstAttribute="trailing" secondItem="oci-0M-rsU" secondAttribute="trailing" constant="16" id="s6J-la-fo2"/>
                             <constraint firstItem="oci-0M-rsU" firstAttribute="leading" secondItem="Gt1-GC-ywG" secondAttribute="leading" constant="16" id="tZI-Kd-HCV"/>

@@ -59,8 +59,8 @@ class ToDoCompletedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // I took out the super.viewDidLoad() and it didn't display if the label is centered horizontally to "Superview"
-        // i need to try it with the super back in
+        // it didn't display the button "Completed" if it is is centered horizontally to container", or if the constraints are set to tie it to the edge
+        // It onlt seems to be this viewcontroller... the todoentryVC works ok with centered textedit and add button
         
             // selectedToDo is an optional. The following means display the toDoItem selected from the tableview (1st screen) if there is a value, otherwise do nothing.
             titleLabel.text = selectedToDo?.toDoItem
